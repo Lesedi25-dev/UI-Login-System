@@ -281,32 +281,46 @@ button:hover {
     transform: translateY(-2px); 
 }
 
+/* media query */
+
 @media screen and (max-width: 768px) {
+    /* 1. Shrink the whole container to fit a phone screen width */
     .container {
-        padding: 20px !important;
         width: 95% !important;
-        min-height: auto !important;
-        flex-direction: column !important;
-        margin-top: 50px;
+        min-height: 480px !important; /* Shorter height so it doesn't hide your buttons */
+        margin: 10px auto !important;
     }
 
-    .form-container {
-        padding: 30px 20px !important;
-        width: 100% !important;
-        height: auto !important;
-        position: relative !important;
-    }
-    
-    .toggle-container {
-        display: none !important;
+    /* 2. Make the white and purple sides share the tiny space 50/50 */
+    .form-container, .toggle-container {
+        width: 50% !important;
     }
 
-    input {
-        width: 100% !important;
-        padding: 12px !important;
-        margin: 8px 0 !important;
+    /* 3. Shrink the text so it doesn't overflow the boxes */
+    h1 {
+        font-size: 1.2rem !important;
+    }
+
+    p {
+        font-size: 0.7rem !important;
+        line-height: 1.2 !important;
+        margin: 10px 0 !important;
+    }
+
+    /* 4. Make the buttons smaller to fit the narrow columns */
+    button {
+        padding: 8px 20px !important;
+        font-size: 0.7rem !important;
+    }
+
+    /* 5. Shrink the social icons */
+    .social-icons a {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.8rem !important;
     }
 }
+
 
 
 
